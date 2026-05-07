@@ -1,0 +1,21 @@
+<h1>Your Tasks</h1>
+
+<ul style="list-style: none;">
+  {{#each tasks}}
+    <li style="margin: 10px 0;">
+      {{#if this.done}}
+        <s style="color: gray;">{{this.text}}</s>
+      {{else}}
+        {{this.text}}
+      {{/if}}
+
+      <a href="/done-task/{{@index}}" style="margin-left:10px; color:blue;">Done</a>
+      <a href="/edit-task/{{@index}}" style="margin-left:10px; color:blue;">Edit</a>
+      <a href="/delete-task/{{@index}}" style="margin-left:10px; color:blue;">Delete</a>
+    </li>
+  {{/each}}
+</ul>
+
+<br/>
+
+<a href="/add-task">Add New Task</a>

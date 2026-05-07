@@ -1,0 +1,10 @@
+<h1>Edit Task</h1>
+
+<form method="POST" action="/edit-task/{{index}}">
+  <input type="text" name="updatedTask" value="{{task.text}}" />
+  <button type="submit">Save</button>
+</form>
+
+<br/>
+
+<a href="/tasks">Back to Tasks</a>
