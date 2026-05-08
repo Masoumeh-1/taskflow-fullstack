@@ -201,7 +201,6 @@ async function connectDB() {
   console.log("Connected to MongoDB");
 }
 
-connectDB();
 
 
 app.post('/api/signup', async (req, res) => {
@@ -249,6 +248,13 @@ app.post('/api/login', async (req, res) => {
 });
 
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-}); 
+connectDB()
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
+    });
+  })
+  .catch((error) => {
+    console.error("MongoDB connection failed:", error.message);
+    process.exit(1);
+  }); 
