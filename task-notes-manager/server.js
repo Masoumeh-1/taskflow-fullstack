@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars'); 
-const port = 5000; 
+const port = process.env.PORT || 5000; 
 let tasks=[]; 
 let notes = [];
 
