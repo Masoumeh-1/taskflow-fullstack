@@ -347,3 +347,109 @@ select {
   background-color: white;
   outline: none;
 }
+
+
+.dark .auth-section {
+  background-color: #1f2937;
+  color: #ffffff;
+  border: 1px solid #374151;
+}
+
+.dark .auth-section h3 {
+  color: #ffffff;
+}
+
+.dark .auth-section .input {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .app-container {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 14px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .app-title {
+    font-size: 32px;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .logo-icon {
+    font-size: 32px;
+  }
+
+  .header-user {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .header-user span {
+    font-size: 15px;
+  }
+
+  .auth-section {
+    padding: 16px;
+  }
+
+  .auth-section .input,
+  .auth-section .btn {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+
+  .top-controls {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+  }
+
+  .top-controls > *,
+  .top-controls input,
+  .top-controls select,
+  .top-controls button {
+    width: 100%;
+  }
+
+  .task-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .task-buttons {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
